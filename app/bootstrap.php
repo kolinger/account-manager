@@ -14,9 +14,11 @@ $configurator->createRobotLoader()
 $configurator->addConfig(dirname(__FILE__) . '/config/config.neon');
 $configurator->addConfig(dirname(__FILE__) . '/config/config.local.neon', NConfigurator::NONE);
 
-$configurator->onCompile[] = function ($configurator, $compiler) {
+$configurator->onCompile[] = callback('registerDibiExtension');
+
+function registerDibiExtension($configurator, $compiler) {
 	$compiler->addExtension('dibi', new FixedDibiNetteExtension);
-};
+}
 
 $container = $configurator->createContainer();
 
