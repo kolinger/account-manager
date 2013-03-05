@@ -6,6 +6,7 @@
 #
 common:
 	parameters:
+		lang: cz
 
 
 	php:
@@ -20,6 +21,12 @@ common:
 
 
 	services:
+		translator:
+			factory: Gettext::getTranslator
+			setup:
+				- addFile(%appDir%/lang, dictionary)
+				- Panel::register
+
 		authenticator:
 			class: Authenticator
 

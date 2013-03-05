@@ -57,45 +57,23 @@ class Helper
 
 			$time = '';
 			if ($days > 0) {
-				$time .= self::formatPlural($days, 'den', 'dny', 'dnů');
+				$time .= $days . ' ' ._n('den', NULL, $days);
 			}
 			if ($hours > 0) {
 				if ($days > 0) {
 					$time .= ' ';
 				}
-				$time .= self::formatPlural($hours, 'hodina', 'hodiny', 'hodin');
+				$time .= $hours . ' ' . _n('hodina', NULL, $hours);
 			}
 			if ($minutes > 0 && $days == 0) {
 				if ($hours > 0) {
 					$time .= ' ';
 				}
-				$time .= self::formatPlural($minutes, 'minuta', 'minuty', 'minut');
+				$time .= $minutes . ' ' ._n('minuta', NULL, $minutes);
 			}
 		}
 
 		return $time;
-	}
-
-
-
-	/**
-	 * @param int $count
-	 * @param string $s1
-	 * @param string $s2
-	 * @param string $s3
-	 * @return string
-	 */
-	public static function formatPlural($count, $s1, $s2, $s3)
-	{
-		if ($count == 1) {
-			$prefix = $s1;
-		} else if ($count > 1 && $count < 5) {
-			$prefix = $s2;
-		} else {
-			$prefix = $s3;
-		}
-
-		return $count . ' ' . $prefix;
 	}
 
 }

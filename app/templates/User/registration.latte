@@ -1,40 +1,40 @@
-{block title}Registrace{/block}
+{block title}{_}Registrace{/_}{/block}
 {block content}
 <div class="login">
 	<div class="page-header">
-		<h1>Registrace</h1>
+		<h1>{_}Registrace{/_}</h1>
 	</div>
 
 	<div class="alert alert-{$flash->type}" n:foreach="$flashes as $flash">{$flash->message}</div>
 
 	{form registrationForm class => 'form-horizontal'}
-		<div class="alert alert-error" n:foreach="$form->getErrors() as $error">{$error}</div>
+		<div class="alert alert-error" n:foreach="$form->getErrors() as $error">{_}{$error}{/_}</div>
 
 		<div class="control-group">
 			{label username, class => 'control-label' /}
 			<div class="controls">
-				{input username, placeholder => 'Jméno'}
+				{input username, placeholder => __('Jméno')}
 			</div>
 		</div>
 
 		<div class="control-group">
 			{label email, class => 'control-label' /}
 			<div class="controls">
-				{input email, placeholder => 'E-mail'}
+				{input email, placeholder => __('E-mail')}
 			</div>
 		</div>
 
 		<div class="control-group">
 			{label password, class => 'control-label' /}
 			<div class="controls">
-				{input password, placeholder => 'Heslo'}
+				{input password, placeholder => __('Heslo')}
 			</div>
 		</div>
 
 		<div class="control-group">
 			{label password2, class => 'control-label' /}
 			<div class="controls">
-				{input password2, placeholder => 'Ověření hesla'}
+				{input password2, placeholder => __('Ověření hesla')}
 			</div>
 		</div>
 
@@ -47,7 +47,7 @@
 
 		<div class="control-group">
 			<div class="controls to-left">
-				<a n:href="User:login">← zpět na přihlášení</a>
+				<a n:href="User:login">← {_}zpět na přihlášení{/_}</a>
 				{input save, class => 'btn'}
 			</div>
 		</div>

@@ -12,7 +12,11 @@ class RouterFactory
 	public function createRouter()
 	{
 		$router = new NRouteList();
-		$router[] = new NRoute('<presenter>[/<action>][/<id>]', 'Dashboard:default');
+		$router[] = new NRoute('[<lang cz|en|sk>/]<presenter>[/<action>][/<id>]', array(
+			'presenter' => 'Dashboard',
+			'action' => 'default',
+			'lang' => 'cz',
+		));
 		return $router;
 	}
 

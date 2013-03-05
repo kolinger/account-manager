@@ -4,8 +4,8 @@
 	<h1 class="pull-left">{block title}{/block}</h1>
 
 	<div class="pull-right user">
-		<span>Přihlášený uživatel: <b>{$user->getIdentity()->username}</b></span>
-		<a n:href="User:logout" class="btn btn-danger">Odhlásit se</a>
+		<span>{_}Přihlášený uživatel:{/_} <b>{$user->getIdentity()->username}</b></span>
+		<a n:href="User:logout" class="btn btn-danger">{_}Odhlásit se{/_}</a>
 	</div>
 </div>
 

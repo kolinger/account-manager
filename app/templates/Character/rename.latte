@@ -1,16 +1,20 @@
 {extends '../content.latte'}
-{block title}Přejmenování postavy{/block}
+{block title}{_}Přejmenování postavy{/_}{/block}
 {block middle}
 
-<p>Přejmenování postavy <b>{$character->name}</b> ({Helper::$races[$character->race]} {Helper::$classes[$character->class]} {$character->level} lvl)</p>
-
+<p>{_}Přejmenování postavy{/_} <b>{$character->name}</b> ({Helper::$races[$character->race]} {Helper::$classes[$character->class]} {$character->level} lvl)</p>
+{if $price['type'] == 'item'}
+	<p>{_}Cena:{/_} {$price['count']}x {$price['item']} </p>
+{elseif $price['type'] == 'golds'}
+	<p>{_}Cena:{/_} {$price['count']}g</p>
+{/if}
 {form renameForm class => 'form-horizontal'}
-	<div class="alert alert-error" n:foreach="$form->getErrors() as $error">{$error}</div>
+	<div class="alert alert-error" n:foreach="$form->getErrors() as $error">{_}{$error}{/_}</div>
 
 	<div class="control-group">
 		{label name, class => 'control-label' /}
 		<div class="controls">
-			{input name, placeholder => 'Jméno'}
+			{input name, placeholder => __('Jméno')}
 		</div>
 	</div>
 
@@ -21,4 +25,4 @@
 	</div>
 {/form}
 
-<a n:href="Dashboard:" class="btn">← zpátky na přehled</a>
+<a n:href="Dashboard:" class="btn">← {_}zpátky na přehled{/_}</a>

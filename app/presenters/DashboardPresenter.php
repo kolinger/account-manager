@@ -104,6 +104,8 @@ class DashboardPresenter extends BasePresenter
 	protected function createComponentCharactersForm()
 	{
 		$form = new NAppForm;
+		$form->setTranslator($this->translator);
+		$form->addProtection('Platnost formuláře vypršela, aktualizujte prosím stránku a akci opakujte');
 
 		$form->addRadioList('character');
 

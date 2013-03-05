@@ -79,6 +79,7 @@ class UserPresenter extends BasePresenter
 	protected function createComponentChangePasswordForm()
 	{
 		$form = new NAppForm;
+		$form->setTranslator($this->translator);
 		$form->addProtection('Platnost formuláře vypršela, aktualizujte prosím stránku a akci opakujte');
 
 		$form->addPassword('old', 'Aktuální heslo')
@@ -130,6 +131,8 @@ class UserPresenter extends BasePresenter
 	protected function createComponentChangeEmailForm()
 	{
 		$form = new NAppForm;
+		$form->setTranslator($this->translator);
+		$form->addProtection('Platnost formuláře vypršela, aktualizujte prosím stránku a akci opakujte');
 
 		$form->addText('email', 'E-mail')
 			->setRequired('Vyplňte prosím e-mail')
@@ -161,7 +164,7 @@ class UserPresenter extends BasePresenter
 
 		$message = new NMail();
 		$message->setFrom($this->getContext()->parameters['email']);
-		$message->setSubject('Změna e-mailu');
+		$message->setSubject(__('Změna e-mailu'));
 		$message->addTo($account->email);
 		$message->setBody($template);
 		$message->send();
@@ -220,6 +223,8 @@ class UserPresenter extends BasePresenter
 	protected function createComponentChangeTypeForm()
 	{
 		$form = new NAppForm;
+		$form->setTranslator($this->translator);
+		$form->addProtection('Platnost formuláře vypršela, aktualizujte prosím stránku a akci opakujte');
 
 		$form->addSelect('type', 'Typ');
 
@@ -254,6 +259,7 @@ class UserPresenter extends BasePresenter
 	protected function createComponentLoginForm()
 	{
 		$form = new NAppForm;
+		$form->setTranslator($this->translator);
 		$form->addProtection('Platnost formuláře vypršela, aktualizujte prosím stránku a akci opakujte');
 
 		$form->addText('username', 'Jméno')
@@ -305,6 +311,7 @@ class UserPresenter extends BasePresenter
 	protected function createComponentRegistrationForm()
 	{
 		$form = new NAppForm;
+		$form->setTranslator($this->translator);
 		$form->addProtection('Platnost formuláře vypršela, aktualizujte prosím stránku a akci opakujte');
 
 		$form->addText('username', 'Jméno')
@@ -401,6 +408,7 @@ class UserPresenter extends BasePresenter
 	protected function createComponentLostPasswordForm()
 	{
 		$form = new NAppForm;
+		$form->setTranslator($this->translator);
 		$form->addProtection('Platnost formuláře vypršela, aktualizujte prosím stránku a akci opakujte');
 
 		$form->addText('value', 'E-mail / jméno')
@@ -473,6 +481,7 @@ class UserPresenter extends BasePresenter
 	protected function createComponentCompleteLostPasswordForm()
 	{
 		$form = new NAppForm;
+		$form->setTranslator($this->translator);
 		$form->addProtection('Platnost formuláře vypršela, aktualizujte prosím stránku a akci opakujte');
 
 		$form->addPassword('password', 'Heslo')

@@ -78,6 +78,11 @@ class CharacterPresenter extends BasePresenter
 	public function renderRename()
 	{
 		$this->template->price = $this->getContext()->parameters['prices']['rename'];
+		if ($this->template->price['type'] == 'item') {
+			$parts = explode(':', $this->template->price['count']);
+			$this->template->price['item'] = $this->worldFacade->findItemNameById($parts[0]);
+			$this->template->price['count'] = $parts[1];
+		}
 		$this->template->character = $this->character;
 	}
 
@@ -89,8 +94,13 @@ class CharacterPresenter extends BasePresenter
 	protected function createComponentRenameForm()
 	{
 		$form = new NAppForm;
+		$form->setTranslator($this->translator);
+		$form->addProtection('Platnost formuláře vypršela, aktualizujte prosím stránku a akci opakujte');
 
-		$form->addText('name', 'Jméno');
+		$form->addText('name', 'Jméno')
+			->setRequired('Vyplňte prosím jméno')
+			->addRule(Nform::MIN_LENGTH, 'Jméno musí mít nejméně %d zanky', 3)
+			->addRule(nform::PATTERN, 'Jméno může obsahovat pouze znaky anglické abecedy', '[a-zA-Z]+');
 
 		$form->addSubmit('rename', 'Přejmenovat');
 
@@ -124,11 +134,9 @@ class CharacterPresenter extends BasePresenter
 
 		if (!$this->characterFacade->takePrice($character->guid, $price['type'], $price['count'])) {
 			if ($price['type'] == 'golds') {
-				$form->addError('Nemáte dostatek goldů, je potřeba ' . $price['count'] . 'g');
+				$form->addError('Nemáte dostatek goldů');
 			} else if ($price['type'] == 'item') {
-				$parts = explode(':', $price['count']);
-				$item = $this->worldFacade->findItemNameById($parts[0]);
-				$form->addError('Nemáte dostatek ' . $item . ', je třeba ' . $parts[1] . 'x');
+				$form->addError('Nemáte dostatek itemů');
 			}
 			return;
 		} else {
@@ -168,6 +176,12 @@ class CharacterPresenter extends BasePresenter
 	public function renderTeleport()
 	{
 		$this->template->character = $this->character;
+		$this->template->price = $this->getContext()->parameters['prices']['teleport'];
+		if ($this->template->price['type'] == 'item') {
+			$parts = explode(':', $this->template->price['count']);
+			$this->template->price['item'] = $this->worldFacade->findItemNameById($parts[0]);
+			$this->template->price['count'] = $parts[1];
+		}
 	}
 
 
@@ -178,9 +192,10 @@ class CharacterPresenter extends BasePresenter
 	protected function createComponentTeleportForm()
 	{
 		$form = new NAppForm;
+		$form->setTranslator($this->translator);
+		$form->addProtection('Platnost formuláře vypršela, aktualizujte prosím stránku a akci opakujte');
 
-		$form->addSelect('location', 'Lokace')
-			->setPrompt('Vyberte prosím cílovou lokaci');
+		$form->addSelect('location', 'Lokace');
 
 		$form->addSubmit('teleport', 'Teleportovat');
 
@@ -208,11 +223,9 @@ class CharacterPresenter extends BasePresenter
 
 		if (!$this->characterFacade->takePrice($character->guid, $price['type'], $price['count'])) {
 			if ($price['type'] == 'golds') {
-				$form->addError('Nemáte dostatek goldů, je potřeba ' . $price['count'] . 'g');
+				$form->addError('Nemáte dostatek goldů');
 			} else if ($price['type'] == 'item') {
-				$parts = explode(':', $price['count']);
-				$item = $this->worldFacade->findItemNameById($parts[0]);
-				$form->addError('Nemáte dostatek ' . $item . ', je třeba ' . $parts[1] . 'x');
+				$form->addError('Nemáte dostatek itemů');
 			}
 			return;
 		} else {

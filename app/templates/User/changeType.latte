@@ -1,9 +1,9 @@
 {extends '../content.latte'}
-{block title}Změna typu účtu{/block}
+{block title}{_}Změna typu účtu{/_}{/block}
 {block middle}
 
 {form changeTypeForm class => 'form-horizontal'}
-	<div class="alert alert-error" n:foreach="$form->getErrors() as $error">{$error}</div>
+	<div class="alert alert-error" n:foreach="$form->getErrors() as $error">{_}{$error}{/_}</div>
 
 	<div class="control-group">
 		{label type, class => 'control-label' /}
@@ -19,4 +19,4 @@
 	</div>
 {/form}
 
-<a n:href="Dashboard:" class="btn">← zpátky na přehled</a>
+<a n:href="Dashboard:" class="btn">← {_}zpátky na přehled{/_}</a>

@@ -1,33 +1,33 @@
-{block title}Přihlášení{/block}
+{block title}{_}Přihlášení{/_}{/block}
 {block content}
 <div class="login">
 	<div class="page-header">
-		<h1>Přihlášení</h1>
+		<h1>{_}Přihlášení{/_}</h1>
 	</div>
 
 	<div class="alert alert-{$flash->type}" n:foreach="$flashes as $flash">{$flash->message}</div>
 
 	{form loginForm class => 'form-horizontal'}
-		<div class="alert alert-error" n:foreach="$form->getErrors() as $error">{$error}</div>
+		<div class="alert alert-error" n:foreach="$form->getErrors() as $error">{_}{$error}{/_}</div>
 
 		<div class="control-group">
 			{label username, class => 'control-label' /}
 			<div class="controls">
-				{input username, placeholder => 'Jméno'}
+				{input username, placeholder => __('Jméno')}
 			</div>
 		</div>
 
 		<div class="control-group">
 			{label password, class => 'control-label' /}
 			<div class="controls">
-				{input password, placeholder => 'Heslo'}
+				{input password, placeholder => __('Heslo')}
 			</div>
 		</div>
 
 		<div class="control-group">
 			<div class="controls to-left">
-				<a n:href="User:lostPassword">Zapomenuté heslo</a>
-				<a n:href="User:registration">Registrace</a>
+				<a n:href="User:lostPassword">{_}Zapomenuté heslo{/_}</a>
+				<a n:href="User:registration">{_}Registrace{/_}</a>
 				{input login, class => 'btn'}
 			</div>
 		</div>

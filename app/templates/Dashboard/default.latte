@@ -3,11 +3,11 @@
 {block middle}
 <table class="table table-bordered table-hover">
 	<tr>
-		<th>Jméno</th>
+		<th>{_}Jméno{/_}</th>
 		<td>{$account->username}</td>
 	</tr>
 	<tr>
-		<th>Identifikační číslo</th>
+		<th>{_}Identifikační číslo{/_}</th>
 		<td>{$account->id}</td>
 	</tr>
 	<tr>
@@ -15,50 +15,52 @@
 		<td>{$account->email}</td>
 	</tr>
 	<tr>
-		<th>Typ</th>
+		<th>{_}Typ{/_}</th>
 		<td>
 			{if $account->expansion == 0}
 				Classic
 			{elseif $account->expansion = 1}
 				Burning Crusade
-			{else}
+			{elseif $account->expansion = 2}
 				Wrath of the Lich King
+			{else}
+				Cataclysm
 			{/if}
 		</td>
 	</tr>
 	<tr>
-		<th>Datum vytvoření</th>
+		<th>{_}Datum vytvoření{/_}</th>
 		<td>{$account->joindate|date:"j. n. Y H:i"}</td>
 	</tr>
 	<tr>
-		<th>Poslední přihlášení</th>
+		<th>{_}Poslední přihlášení{/_}</th>
 		<td>{$account->last_login|date:"j. n. Y H:i"} (IP: {$account->last_ip})</td>
 	</tr>
 	<tr>
-		<th>Nahráno</th>
+		<th>{_}Nahráno{/_}</th>
 		<td>{Helper::formatPlayedTime($account->played)}</td>
 	</tr>
 </table>
 
 <div class="big-buttons">
-	<a n:href="User:changePassword" class="btn btn-large">Změnit heslo</a>
-	<a n:href="User:changeEmail" class="btn btn-large">Změnit e-mail</a>
-	<a n:href="User:changeType" class="btn btn-large">Změnit typ</a>
+	<a n:href="User:changePassword" class="btn btn-large">{_}Změnit heslo{/_}</a>
+	<a n:href="User:changeEmail" class="btn btn-large">{_}Změnit e-mail{/_}</a>
+	<a n:href="User:changeType" class="btn btn-large">{_}Změnit typ{/_}</a>
 	<!--<a href="#" class="btn btn-large">Aukce postav</a> :)-->
 </div>
 
 {form charactersForm}
-	<div class="alert alert-error" n:foreach="$form->getErrors() as $error">{$error}</div>
+	<div class="alert alert-error" n:foreach="$form->getErrors() as $error">{_}{$error}{/_}</div>
 
 	<table class="table table-bordered table-hover">
 		<thead>
 			<tr>
-				<th>Postava</th>
-				<th>Rasa</th>
-				<th>Povolání</th>
-				<th>Úroveň</th>
-				<th>Nahráno</th>
-				<th>Výběr</th>
+				<th>{_}Postava{/_}</th>
+				<th>{_}Rasa{/_}</th>
+				<th>{_}Povolání{/_}</th>
+				<th>{_}Úroveň{/_}</th>
+				<th>{_}Nahráno{/_}</th>
+				<th>{_}Výběr{/_}</th>
 			</tr>
 		</thead>
 		<tbody class="pointer">

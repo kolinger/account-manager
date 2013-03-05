@@ -1,5 +1,5 @@
 parameters:
-	# nastavení databáze
+	# database settings
 	server: 127.0.0.1
 	user: local
 	password: local
@@ -8,26 +8,26 @@ parameters:
 		characters: w_characters
 		world: w_world
 
-	# e-mail který se bude zobrazovat jako odesílatel
+	# system e-mails author
 	email: Account Manager 2.0 <your@server.tdl>
 
-	# verze hry (classic, tbc, wotlk nebo cata)
+	# game expansion (classic, tbc, wotlk or cata)
 	version: wotlk
 
-	# emulator (tc, oregon nebo skyfire)
+	# emulator (tc, oregon or skyfire)
 	emulator: tc
 
-	# ceny - musí se zadat počet a uvést typ "golds" (count = počet goldů) nebo "item" (count = ID:POCET)
+	# prices - if type=golds then count is count of golds, when type=item count is ITEM_ID:NUMBER_OF_ITEMS (example: 123:10)
 	prices:
 		rename:
-			type: golds
-			count: 50
+			type: item
+			count: 5000000:10
 
 		teleport:
 			type: golds
 			count: 50
 
-	# cílové lokace pro teleportování
+	# teleporter locations, full coordinates (x, y, z, o, map) or link to 'game_tele.name' table/column
 	locations:
 		'Orgrimmar': Orgrimmar
 		'Stormwind':
