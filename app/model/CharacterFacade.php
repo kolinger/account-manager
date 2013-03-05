@@ -111,7 +111,7 @@ class CharacterFacade extends BaseFacade
 			$o = $location['o'];
 			$map = $location['map'];
 		} else {
-			$tele = $this->connection->query('SELECT [position_x], [position_y], [position_z], [orientation], [map] FROM [:world:game_tele] WHERE [name] %like~', $location)->fetch();
+			$tele = $this->connection->query('SELECT [position_x], [position_y], [position_z], [orientation], [map] FROM [:world:game_tele] WHERE [name] LIKE %like~', $location)->fetch();
 			$x = $tele['position_x'];
 			$y = $tele['position_y'];
 			$z = $tele['position_z'];
