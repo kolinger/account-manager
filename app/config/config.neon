@@ -1,0 +1,60 @@
+#
+# SECURITY WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+#
+# If you don't protect this directory from direct web access, anybody will be able to see your passwords.
+# http://nette.org/security-warning
+#
+common:
+	parameters:
+
+
+	php:
+		date.timezone: Europe/Prague
+
+	nette:
+		application:
+			errorPresenter: Error
+
+		session:
+			expiration: 14 days
+
+
+	services:
+		authenticator:
+			class: Authenticator
+
+		routerFactory:
+			class: RouterFactory
+
+		router:
+			factory: @routerFactory::createRouter
+
+		accountFacade:
+			class: AccountFacade
+			arguments: [@dibi.connection]
+
+		characterFacade:
+			class: CharacterFacade
+			arguments: [@dibi.connection]
+
+		tokenFacade:
+			class: TokenFacade
+			arguments: [@dibi.sqlite]
+
+
+	factories:
+
+	dibi:
+		host: %server%
+		username: %user%
+		password: %password%
+		lazy: TRUE
+		substitutes:
+			auth: %databases.auth%.
+			chars: %databases.characters%.
+			world: %databases.world%.
+
+
+production < common:
+
+development < common:

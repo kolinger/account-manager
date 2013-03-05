@@ -1,0 +1,30 @@
+parameters:
+	# nastavení databáze
+	server: 127.0.0.1
+	user: local
+	password: local
+	databases:
+		auth: w_auth
+		characters: w_characters
+		world: w_world
+
+	# e-mail který se bude zobrazovat jako odesílatel
+	email: Account Manager 2.0 <your@server.tdl>
+
+	# verze hry (classic, tbc nebo wotlk)
+	version: wotlk
+
+	# ceny - musí se zadat počet a uvést typ "golds" (count = počet goldů) nebo "item" (count = počet itemů)
+	prices:
+		rename:
+			type: golds
+			count: 50
+
+		teleport:
+			type: golds
+			count: 50
+
+	# cílové lokace pro teleportování
+	locations:
+		orgrimmar:
+		stormwind:

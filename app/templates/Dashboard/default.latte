@@ -1,0 +1,84 @@
+{extends '../content.latte'}
+{block title}Přehled{/block}
+{block middle}
+<table class="table table-bordered table-hover">
+	<tr>
+		<th>Jméno</th>
+		<td>{$account->username}</td>
+	</tr>
+	<tr>
+		<th>Identifikační číslo</th>
+		<td>{$account->id}</td>
+	</tr>
+	<tr>
+		<th>E-mail</th>
+		<td>{$account->email}</td>
+	</tr>
+	<tr>
+		<th>Typ</th>
+		<td>
+			{if $account->expansion == 0}
+				Classic
+			{elseif $account->expansion = 1}
+				Burning Crusade
+			{else}
+				Wrath of the Lich King
+			{/if}
+		</td>
+	</tr>
+	<tr>
+		<th>Datum vytvoření</th>
+		<td>{$account->joindate|date:"j. n. Y H:i"}</td>
+	</tr>
+	<tr>
+		<th>Poslední přihlášení</th>
+		<td>{$account->last_login|date:"j. n. Y H:i"} (IP: {$account->last_ip})</td>
+	</tr>
+	<tr>
+		<th>Nahráno</th>
+		<td>{Helper::formatPlayedTime($account->played)}</td>
+	</tr>
+</table>
+
+<div class="big-buttons">
+	<a n:href="User:changePassword" class="btn btn-large">Změnit heslo</a>
+	<a n:href="User:changeEmail" class="btn btn-large">Změnit e-mail</a>
+	<a n:href="User:changeType" class="btn btn-large">Změnit typ</a>
+	<!--<a href="#" class="btn btn-large">Aukce postav</a> :)-->
+</div>
+
+{form charactersForm}
+	<div class="alert alert-error" n:foreach="$form->getErrors() as $error">{$error}</div>
+
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th>Postava</th>
+				<th>Rasa</th>
+				<th>Povolání</th>
+				<th>Úroveň</th>
+				<th>Nahráno</th>
+				<th>Výběr</th>
+			</tr>
+		</thead>
+		<tbody class="pointer">
+			<tr n:foreach="$characters as $character">
+				<td>{$character->name}</td>
+				<td>{Helper::$races[$character->race]}</td>
+				<td>{Helper::$classes[$character->class]}</td>
+				<td>{$character->level} lvl</td>
+				<td>{Helper::formatPlayedTime($character->totaltime)}</td>
+				<td>
+					{var $control = $form['character']->getControl($character->guid)}
+					{$control[0]}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="big-buttons">
+		{input rename, class => 'btn btn-large'}
+
+		{input teleport, class => 'btn btn-large'}
+	</div>
+{/form}

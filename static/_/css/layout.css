@@ -1,0 +1,53 @@
+/************************ login ************************/
+
+.login {
+	margin: 130px auto 150px auto;
+	width: 500px;
+}
+
+.login .form-horizontal .controls {
+	margin-left: 150px;
+}
+
+.login .form-horizontal .controls a {
+	margin: 5px 10px 0 0;
+	float: left;
+}
+
+.login .form-horizontal .control-label {
+	width: 130px;
+}
+
+.login .form-horizontal .to-left {
+	margin-left: 85px;
+}
+
+/************************ layout ************************/
+
+.container {
+	width: 800px;
+	margin-top: 20px;
+}
+
+.page-header .user {
+	margin-top: 27px;
+}
+
+.page-header .user span {
+	display: block;
+	margin-right: 10px;
+	margin-top: 5px;
+	float: left;
+}
+
+.big-buttons {
+	margin-bottom: 20px;
+}
+
+input[type="radio"] {
+	vertical-align: top;
+}
+
+tbody.pointer tr:hover td {
+	cursor: pointer;
+}

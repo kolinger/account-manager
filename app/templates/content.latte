@@ -1,0 +1,14 @@
+{extends '@layout.latte'}
+{block content}
+<div class="page-header clearfix">
+	<h1 class="pull-left">{block title}{/block}</h1>
+
+	<div class="pull-right user">
+		<span>Přihlášený uživatel: <b>{$user->getIdentity()->username}</b></span>
+		<a n:href="User:logout" class="btn btn-danger">Odhlásit se</a>
+	</div>
+</div>
+
+<div class="alert alert-{$flash->type}" n:foreach="$flashes as $flash">{$flash->message}</div>
+
+{include #middle}
