@@ -1,0 +1,205 @@
+# Gettext keys exported by GettextTranslator and Translation Panel
+# Created: 2013-03-05 22:54:30
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-03-05 22:54+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4 ? 1 : 2));\n"
+
+
+msgid "Aktuální heslo"
+msgstr "Actual passwor"
+
+msgid "Byl zadán neplatný formát e-mailu"
+msgstr "E-mail have wrong format"
+
+msgid "Cena:"
+msgstr "Price:"
+
+msgid "Classic"
+msgstr "Classi"
+
+msgid "Datum vytvoření"
+msgstr "Create date"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid "E-mail / jméno"
+msgstr "E-mail / name"
+
+msgid "E-mail nebo jméno"
+msgstr "E-mail or name"
+
+msgid "Heslo"
+msgstr "Password"
+
+msgid "Heslo (ověření)"
+msgstr "Password (verify)"
+
+msgid "Heslo musí mít alespoň %d znaky"
+msgstr "Password must be longer atleast %d characters"
+
+msgid "Identifikační číslo"
+msgstr "Identifier"
+
+msgid "Jméno"
+msgstr "Name"
+
+msgid "Jméno musí mít nejméně %d zanky"
+msgstr "Name must ve longer atleast %d characters"
+
+msgid "Jméno může obsahovat pouze znaky anglické abecedy"
+msgstr "Name must be only in aflfanumeric characters"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Lokace"
+msgstr "Location"
+
+msgid "Nahráno"
+msgstr "Played"
+
+msgid "Nové heslo"
+msgstr "New password"
+
+msgid "Odeslat"
+msgstr "Send"
+
+msgid "Odhlásit se"
+msgstr "Logout"
+
+msgid "Ověření hesla"
+msgstr "Password verify"
+
+msgid "Ověření hesla nesouhlasí"
+msgstr "Password verify failed"
+
+msgid "Ověření nového hesla"
+msgstr "Verify new password"
+
+msgid "Ověření nového hesla nesouhlasí"
+msgstr "Verify new password failed"
+
+msgid "Platnost formuláře vypršela, aktualizujte prosím stránku a akci opakujte"
+msgstr "Form expired, please refresh page and repeat action again"
+
+msgid "Poslední přihlášení"
+msgstr "Last login"
+
+msgid "Postava"
+msgstr "Character"
+
+msgid "Povolání"
+msgstr "Class"
+
+msgid "Přejmenovat"
+msgstr "Rename"
+
+msgid "Přejmenovat postavu"
+msgstr "Rename character"
+
+msgid "Přejmenování postavy"
+msgstr "Character rename"
+
+msgid "Přihlášení"
+msgstr "Login"
+
+msgid "Přihlášený uživatel:"
+msgstr "Logged user:"
+
+msgid "Rasa"
+msgstr "Race"
+
+msgid "Registrace"
+msgstr "Registration"
+
+msgid "Registrovat se"
+msgstr "Register"
+
+msgid "Teleportovat"
+msgstr "Teleport"
+
+msgid "Teleportovat postavu"
+msgstr "Teleport character"
+
+msgid "Teleportování postavy"
+msgstr "Character teleporatation"
+
+msgid "Typ"
+msgstr "Type"
+
+msgid "Vyberte prosím postavu"
+msgstr "Please select character"
+
+msgid "Vyplňte prosím aktuální heslo"
+msgstr "Please fill actual password"
+
+msgid "Vyplňte prosím e-mail"
+msgstr "Please fill e-mail"
+
+msgid "Vyplňte prosím heslo"
+msgstr "Please fill password"
+
+msgid "Vyplňte prosím jméno"
+msgstr "Please fill name"
+
+msgid "Vyplňte prosím nové heslo"
+msgstr "Please fill new password"
+
+msgid "Vyplňte prosím ověření hesla"
+msgstr "Please fill password verify"
+
+msgid "Vyplňte prosím ověření nového hesla"
+msgstr "Please fill verfiy new password"
+
+msgid "Výběr"
+msgstr "Selection"
+
+msgid "Zadejte prosím e-mail nebo jméno"
+msgstr "Please fill name or e-mail"
+
+msgid "Zapomenuté heslo"
+msgstr "Lost password"
+
+msgid "Změna e-mailu"
+msgstr "E-mail change"
+
+msgid "Změna hesla"
+msgstr "Password change"
+
+msgid "Změna typu účtu"
+msgstr "Type change"
+
+msgid "Změnit"
+msgstr "Change"
+
+msgid "Změnit e-mail"
+msgstr "Change e-mail"
+
+msgid "Změnit heslo"
+msgstr "Change Password"
+
+msgid "Změnit typ"
+msgstr "Change type"
+
+msgid "minuta"
+msgstr[0] "minute"
+msgstr[1] "minutes"
+msgstr[2] "minutes"
+
+msgid "zpátky na přehled"
+msgstr "back to dashboard"
+
+msgid "zpět na přihlášení"
+msgstr "back to login"
+
+msgid "Úroveň"
+msgstr "Level"
+

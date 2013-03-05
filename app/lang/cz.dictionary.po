@@ -1,0 +1,234 @@
+# Gettext keys exported by GettextTranslator and Translation Panel
+# Created: 2013-03-05 22:35:45
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-03-05 22:57+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4 ? 1 : 2));\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.5.5\n"
+
+msgid "minuta"
+msgid_plural "minut"
+msgstr[0] "minuta"
+msgstr[1] "minuty"
+msgstr[2] "minut"
+
+msgid "Přihlášený uživatel:"
+msgstr ""
+
+msgid "Odhlásit se"
+msgstr ""
+
+msgid "Jméno"
+msgstr ""
+
+msgid "Identifikační číslo"
+msgstr ""
+
+msgid "Typ"
+msgstr ""
+
+msgid "Datum vytvoření"
+msgstr ""
+
+msgid "Poslední přihlášení"
+msgstr ""
+
+msgid "Nahráno"
+msgstr ""
+
+msgid "Změnit heslo"
+msgstr ""
+
+msgid "Změnit e-mail"
+msgstr ""
+
+msgid "Změnit typ"
+msgstr ""
+
+msgid "Postava"
+msgstr ""
+
+msgid "Rasa"
+msgstr ""
+
+msgid "Povolání"
+msgstr ""
+
+msgid "Úroveň"
+msgstr ""
+
+msgid "Výběr"
+msgstr ""
+
+msgid "Bla"
+msgstr ""
+
+msgid "Huh"
+msgstr ""
+
+msgid "Test"
+msgstr ""
+
+msgid "Přejmenovat postavu"
+msgstr ""
+
+msgid "Teleportovat postavu"
+msgstr ""
+
+msgid ""
+"Platnost formuláře vypršela, aktualizujte prosím stránku a akci opakujte"
+msgstr ""
+
+msgid "Vyberte prosím postavu"
+msgstr ""
+
+msgid "Přejmenování postavy"
+msgstr ""
+
+msgid "Cena:"
+msgstr ""
+
+msgid "Vyplňte prosím jméno"
+msgstr ""
+
+msgid "Jméno musí mít nejméně %d zanky"
+msgstr ""
+
+msgid "Jméno může obsahovat pouze znaky anglické abecedy"
+msgstr ""
+
+msgid "Přejmenovat"
+msgstr ""
+
+msgid "zpátky na přehled"
+msgstr ""
+
+msgid "Teleportování postavy"
+msgstr ""
+
+msgid "Lokace"
+msgstr ""
+
+msgid "Orgrimmar"
+msgstr ""
+
+msgid "Stormwind"
+msgstr ""
+
+msgid "Stormwind Harbor"
+msgstr ""
+
+msgid "Teleportovat"
+msgstr ""
+
+msgid "Změna hesla"
+msgstr ""
+
+msgid "Aktuální heslo"
+msgstr ""
+
+msgid "Vyplňte prosím aktuální heslo"
+msgstr ""
+
+msgid "Nové heslo"
+msgstr ""
+
+msgid "Vyplňte prosím nové heslo"
+msgstr ""
+
+msgid "Heslo musí mít alespoň %d znaky"
+msgstr ""
+
+msgid "Ověření hesla"
+msgstr ""
+
+msgid "Vyplňte prosím ověření nového hesla"
+msgstr ""
+
+msgid "Ověření nového hesla nesouhlasí"
+msgstr ""
+
+msgid "Ověření nového hesla"
+msgstr ""
+
+msgid "Změnit"
+msgstr ""
+
+msgid "E-mail"
+msgstr ""
+
+msgid "Vyplňte prosím e-mail"
+msgstr ""
+
+msgid "Byl zadán neplatný formát e-mailu"
+msgstr ""
+
+msgid "btn"
+msgstr ""
+
+msgid "Změna typu účtu"
+msgstr ""
+
+msgid "Classic"
+msgstr ""
+
+msgid "Burning Crusade"
+msgstr ""
+
+msgid "Wrath of the Lich King"
+msgstr ""
+
+msgid "Odhlášení bylo úspěšné"
+msgstr ""
+
+msgid "Přihlášení"
+msgstr ""
+
+msgid "Heslo"
+msgstr ""
+
+msgid "Vyplňte prosím heslo"
+msgstr ""
+
+msgid "Zapomenuté heslo"
+msgstr ""
+
+msgid "Registrace"
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+msgid "E-mail / jméno"
+msgstr ""
+
+msgid "Zadejte prosím e-mail nebo jméno"
+msgstr ""
+
+msgid "E-mail nebo jméno"
+msgstr ""
+
+msgid "zpět na přihlášení"
+msgstr ""
+
+msgid "Odeslat"
+msgstr ""
+
+msgid "Heslo (ověření)"
+msgstr ""
+
+msgid "Vyplňte prosím ověření hesla"
+msgstr ""
+
+msgid "Ověření hesla nesouhlasí"
+msgstr ""
+
+msgid "Registrovat se"
+msgstr ""
