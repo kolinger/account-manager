@@ -1,0 +1,227 @@
+# Gettext keys exported by GettextTranslator and Translation Panel
+# Created: 2013-03-05 23:44:56
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-03-05 23:44+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4 ? 1 : 2));\n"
+
+
+msgid "Aktuální heslo"
+msgstr "Aktuálne heslo"
+
+msgid "Byl zadán neplatný formát e-mailu"
+msgstr "Bol zadaný neplatný formát e-mailu"
+
+msgid "Cena:"
+msgstr "Cena"
+
+msgid "Datum vytvoření"
+msgstr "Dátum vytvorenia"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid "E-mail / jméno"
+msgstr "E-mail / meno"
+
+msgid "E-mail nebo jméno"
+msgstr "E-mail alebo meno"
+
+msgid "Heslo"
+msgstr "Heslo"
+
+msgid "Heslo (ověření)"
+msgstr "Heslo (overenie)"
+
+msgid "Heslo musí mít alespoň %d znaky"
+msgstr "Heslo musí mať aspoň %d znakov"
+
+msgid "Identifikační číslo"
+msgstr "Identifikačné číslo"
+
+msgid "Jméno"
+msgstr "Meno"
+
+msgid "Jméno musí mít nejméně %d zanky"
+msgstr "Meno musí mať najmenej %d zankov"
+
+msgid "Jméno může obsahovat pouze znaky anglické abecedy"
+msgstr "Meno môže obsahovať len znaky anglickej abecedy"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Lokace"
+msgstr "Lokácia"
+
+msgid "Nahráno"
+msgstr "Nahraté"
+
+msgid "Nové heslo"
+msgstr "Nové heslo"
+
+msgid "Odeslat"
+msgstr "Odoslať"
+
+msgid "Odhlásit se"
+msgstr "Odhlásiť sa"
+
+msgid "Odhlášení bylo úspěšné"
+msgstr "Odhlásenie bolo úspešné"
+
+msgid "Ověření hesla"
+msgstr "Overenie hesla"
+
+msgid "Ověření hesla nesouhlasí"
+msgstr "Overenie hesla nesúhlasi"
+
+msgid "Ověření nového hesla"
+msgstr "Overenie nového hesla"
+
+msgid "Ověření nového hesla nesouhlasí"
+msgstr "Overenie nového hesla nesúhlasi"
+
+msgid "Platnost formuláře vypršela, aktualizujte prosím stránku a akci opakujte"
+msgstr "Platnosť formulára vypršala, aktualizujťe prosím stránku a akciu opakujťe"
+
+msgid "Poslední přihlášení"
+msgstr "Posledné prihlásenie"
+
+msgid "Postava"
+msgstr "Postava"
+
+msgid "Povolání"
+msgstr "Povolanie"
+
+msgid "Přejmenovat"
+msgstr "Premenovať"
+
+msgid "Přejmenovat postavu"
+msgstr "Premenovať postavu"
+
+msgid "Přejmenování postavy"
+msgstr "Premenovanie postavy"
+
+msgid "Přihlášení"
+msgstr "Prihlásenie"
+
+msgid "Přihlášený uživatel:"
+msgstr "Prihlásený užívaťeľ:"
+
+msgid "Rasa"
+msgstr "Rasa"
+
+msgid "Registrace"
+msgstr "Registrácia"
+
+msgid "Registrovat se"
+msgstr "Registrovať sa"
+
+msgid "Teleportovat"
+msgstr "Teleportovať"
+
+msgid "Teleportovat postavu"
+msgstr "Teleportovať postavu"
+
+msgid "Teleportování postavy"
+msgstr "Teleportovanie postavy"
+
+msgid "Typ"
+msgstr "Typ"
+
+msgid "Vyberte prosím postavu"
+msgstr "Vyberťe prosím postavu"
+
+msgid "Vyplňte prosím aktuální heslo"
+msgstr "Vyplnťe prosím aktuálne heslo"
+
+msgid "Vyplňte prosím e-mail"
+msgstr "Vyplnťe prosím e-mail"
+
+msgid "Vyplňte prosím heslo"
+msgstr "Vyplnťe prosím heslo"
+
+msgid "Vyplňte prosím jméno"
+msgstr "Vyplnťe prosím meno"
+
+msgid "Vyplňte prosím nové heslo"
+msgstr "Vyplnťe prosím nové heslo"
+
+msgid "Vyplňte prosím ověření hesla"
+msgstr "Vyplnťe prosím overenie hesla"
+
+msgid "Vyplňte prosím ověření nového hesla"
+msgstr "Vyplnťe prosím overenie nového hesla"
+
+msgid "Výběr"
+msgstr "Výber"
+
+msgid "Zadejte prosím e-mail nebo jméno"
+msgstr "Zadajťe prosím e-mail alebo meno"
+
+msgid "Zapomenuté heslo"
+msgstr "Zabudnuté heslo"
+
+msgid "Změna hesla"
+msgstr "Zmena hesla"
+
+msgid "Změna typu účtu"
+msgstr "Zmena typu účtu"
+
+msgid "Změnit"
+msgstr "Zmeniť"
+
+msgid "Změnit e-mail"
+msgstr "Zmeniť e-mail"
+
+msgid "Změnit heslo"
+msgstr "Zmeniť heslo"
+
+msgid "Změnit typ"
+msgstr "Zmeniť typ"
+
+msgid "den"
+msgid_plural ""
+msgstr[0] "deň"
+msgstr[1] "dni"
+msgstr[2] "dn"
+
+msgid "hodina"
+msgid_plural ""
+msgstr[0] "hodina"
+msgstr[1] "hodiny"
+msgstr[2] "hodín"
+
+msgid "minuta"
+msgid_plural ""
+msgstr[0] "minúta"
+msgstr[1] "minúty"
+msgstr[2] "minút"
+
+msgid "zpátky na přehled"
+msgstr "späť na prehľad"
+
+msgid "zpět na přihlášení"
+msgstr "späť na prihlásenie"
+
+msgid "Úroveň"
+msgstr "Úroveň"
+
+msgid "Přehled"
+msgstr "Prehľad"
+
+msgid "Bla"
+msgstr ""
+
+msgid "Huh"
+msgstr ""
+
+msgid "Test"
+msgstr ""
+
