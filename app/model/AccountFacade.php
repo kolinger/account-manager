@@ -130,6 +130,18 @@ class AccountFacade extends BaseFacade
 		);
 		$this->connection->query('INSERT INTO [:auth:account_banned]', $data);
 
+		// rbac
+		try {
+			$this->connection->query('SELECT 1+1 FROM [:auth:rbac_account_groups] LIMIT 1')->fetch();
+			$data = array(
+				'accountId' => $id,
+				'groupId' => 1, // played commands
+				'realmId' => -1,
+			);
+			$this->connection->query('INSERT INTO [:auth:rbac_account_groups]', $data);
+		} catch (DibiDriverException $e) {
+		}
+
 		return $id;
 	}
 
