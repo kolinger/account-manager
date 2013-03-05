@@ -14,7 +14,7 @@ parameters:
 	# verze hry (classic, tbc nebo wotlk)
 	version: wotlk
 
-	# ceny - musí se zadat počet a uvést typ "golds" (count = počet goldů) nebo "item" (count = počet itemů)
+	# ceny - musí se zadat počet a uvést typ "golds" (count = počet goldů) nebo "item" (count = ID:POCET)
 	prices:
 		rename:
 			type: golds
@@ -26,5 +26,11 @@ parameters:
 
 	# cílové lokace pro teleportování
 	locations:
-		orgrimmar:
-		stormwind:
+		'Orgrimmar': Orgrimmar
+		'Stormwind':
+			x: -8833.38
+			y: 628.628
+			z: 94.0066
+			o: 1.06535
+			map: 0
+		'Stormwind Harbor': StormwindHarbor
