@@ -60,4 +60,12 @@ abstract class BasePresenter extends NPresenter
 		return $template;
 	}
 
+
+
+
+	public function beforeRender()
+	{
+		$this->template->lang = $this->lang;
+	}
+
 }

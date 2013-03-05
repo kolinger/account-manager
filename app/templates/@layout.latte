@@ -22,6 +22,11 @@
 		<script src="{$basePath}/static/_/js/modernizr-1.7.min.js"></script>
 	</head>
 	<body class="container">
+		<div class="lang">
+			{if $lang == 'cz'}česky{else}<a n:href="this, lang => cz">česky</a>{/if} /
+			{if $lang == 'sk'}slovenský{else}<a n:href="this, lang => sk">slovenský</a>{/if} /
+			{if $lang == 'en'}english{else}<a n:href="this, lang => en">english</a>{/if}
+		</div>
 
 		{include #content}
 

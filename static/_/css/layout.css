@@ -51,3 +51,7 @@ input[type="radio"] {
 tbody.pointer tr:hover td {
 	cursor: pointer;
 }
+
+.lang {
+	float: right;
+}
