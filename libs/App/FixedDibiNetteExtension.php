@@ -18,7 +18,7 @@
  * @package    dibi\nette
  * @phpversion 5.3
  */
-class FixedDibiNetteExtension extends NConfigCompilerExtension
+class AppDibiNetteExtension extends NConfigCompilerExtension
 {
 
 	/**

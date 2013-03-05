@@ -17,7 +17,7 @@ $configurator->addConfig(dirname(__FILE__) . '/config/config.local.neon', NConfi
 $configurator->onCompile[] = callback('registerDibiExtension');
 
 function registerDibiExtension($configurator, $compiler) {
-	$compiler->addExtension('dibi', new FixedDibiNetteExtension);
+	$compiler->addExtension('dibi', new AppDibiNetteExtension());
 }
 
 $container = $configurator->createContainer();
