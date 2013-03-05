@@ -14,10 +14,19 @@ msgstr ""
 "X-Generator: Poedit 1.5.5\n"
 
 msgid "minuta"
-msgid_plural "minut"
 msgstr[0] "minuta"
 msgstr[1] "minuty"
 msgstr[2] "minut"
+
+msgid "hodina"
+msgstr[0] "hodina"
+msgstr[1] "hodiny"
+msgstr[2] "hodin"
+
+msgid "den"
+msgstr[0] "den"
+msgstr[1] "dny"
+msgstr[2] "dní"
 
 msgid "Přihlášený uživatel:"
 msgstr ""

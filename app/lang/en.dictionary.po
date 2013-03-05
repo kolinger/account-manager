@@ -194,6 +194,16 @@ msgstr[0] "minute"
 msgstr[1] "minutes"
 msgstr[2] "minutes"
 
+msgid "hodina"
+msgstr[0] "hour"
+msgstr[1] "hours"
+msgstr[2] "hours"
+
+msgid "den"
+msgstr[0] "day"
+msgstr[1] "days"
+msgstr[2] "days"
+
 msgid "zpátky na přehled"
 msgstr "back to dashboard"
 
