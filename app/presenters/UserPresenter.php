@@ -207,23 +207,9 @@ class UserPresenter extends BasePresenter
 
 	public function actionChangeType()
 	{
-		// options
-		$items = array(
-			0 => 'Classic',
-		);
-		if ($this->getContext()->parameters['version'] == 'tbc' || $this->getContext()->parameters['version'] == 'wotlk') {
-			$items[1] = 'Burning Crusade';
-		}
-		if ($this->getContext()->parameters['version'] == 'wotlk') {
-			$items[2] = 'Wrath of the Lich King';
-		}
-		$this['changeTypeForm']['type']->setItems($items);
-
-		// defaults
 		$account = $this->accountFacade->findOneById($this->getUser()->getId());
-		$this['changeTypeForm']->setDefaults(array(
-			'type' => $account->expansion,
-		));
+		$this['changeTypeForm']['type']->setItems($this->getExpansions());
+		$this['changeTypeForm']->setDefaults(array('type' => $account->expansion));
 	}
 
 
@@ -307,23 +293,8 @@ class UserPresenter extends BasePresenter
 
 	public function actionRegistration()
 	{
-		// options
-		$items = array(
-			0 => 'Classic',
-		);
-		$default = 0;
-		if ($this->getContext()->parameters['version'] == 'tbc' || $this->getContext()->parameters['version'] == 'wotlk') {
-			$items[1] = 'Burning Crusade';
-			$default = 1;
-		}
-		if ($this->getContext()->parameters['version'] == 'wotlk') {
-			$items[2] = 'Wrath of the Lich King';
-			$default = 2;
-		}
-		$this['registrationForm']['type']->setItems($items);
-
-		// defaults
-		$this['registrationForm']->setDefaults(array('type' => $default));
+		$this['registrationForm']['type']->setItems($this->getExpansions());
+		$this['registrationForm']->setDefaults(array('type' => $this->getCurrentExpansion()));
 	}
 
 
@@ -420,7 +391,7 @@ class UserPresenter extends BasePresenter
 
 
 
-	/************************ lostPassword ************************/
+	/************************ lost password ************************/
 
 
 
@@ -553,6 +524,42 @@ class UserPresenter extends BasePresenter
 		$this->getUser()->logout();
 		$this->flashMessage('Odhlášení bylo úspěšné', 'success');
 		$this->redirect('User:login');
+	}
+
+
+
+	/************************ helpers ************************/
+
+
+	/**
+	 * @return array
+	 */
+	public function getExpansions()
+	{
+		$version = $this->getContext()->parameters['version'];
+		$items = array(
+			0 => 'Classic',
+		);
+		if (in_array($version, array('tbc', 'wotlk', 'cata'))) {
+			$items[1] = 'Burning Crusade';
+		}
+		if (in_array($version, array('wotlk', 'cata'))) {
+			$items[2] = 'Wrath of the Lich King';
+		}
+		if (in_array($version, array('cata'))) {
+			$items[3] = 'Cataclysm';
+		}
+		return $items;
+	}
+
+
+
+	/**
+	 * @return int
+	 */
+	public function getCurrentExpansion()
+	{
+		return array_search($this->getContext()->parameters['version'], $this->getExpansions());
 	}
 
 }

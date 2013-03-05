@@ -21,5 +21,4 @@ function registerDibiExtension($configurator, $compiler) {
 }
 
 $container = $configurator->createContainer();
-
 return $container;

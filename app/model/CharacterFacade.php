@@ -177,11 +177,7 @@ class CharacterFacade extends BaseFacade
 	 */
 	public function removeItem($id, $item, $count)
 	{
-		try {
-			// trinitycore 2
-			$items = $this->connection->query('SELECT [guid], [count] FROM [:chars:item_instance] WHERE [owner_guid] = %i AND [itemEntry] = %i', $id, $item)->fetchAll();
-		} catch (DibiDriverException $e) {
-			// oregoncore
+		if ($this->getEmulator() == self::OREGON_CORE) {
 			$items = $this->connection->query("
 				SELECT
 					[guid],
@@ -190,7 +186,8 @@ class CharacterFacade extends BaseFacade
 				FROM [:chars:item_instance]
 				WHERE CAST(SUBSTRING_INDEX(SUBSTRING_INDEX([data], ' ', 4), ' ', -1) AS UNSIGNED) = %i", $item
 			);
-			$oregon = TRUE;
+		} else {
+			$items = $this->connection->query('SELECT [guid], [count] FROM [:chars:item_instance] WHERE [owner_guid] = %i AND [itemEntry] = %i', $id, $item)->fetchAll();
 		}
 
 		// remove or update items
@@ -199,7 +196,7 @@ class CharacterFacade extends BaseFacade
 				$this->connection->query('DELETE FROM [:chars:item_instance] WHERE [guid] = %i', $item->guid);
 				$this->connection->query('DELETE FROM [:chars:character_inventory] WHERE [item] = %i', $item->guid);
 			} else {
-				if (isset($oregon)) {
+				if ($this->getEmulator() == self::OREGON_CORE) {
 					$parts = explode(' ', $item->data);
 					$parts[14] = $item->count - $count;
 					$data = array(

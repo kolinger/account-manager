@@ -11,10 +11,10 @@ parameters:
 	# e-mail který se bude zobrazovat jako odesílatel
 	email: Account Manager 2.0 <your@server.tdl>
 
-	# verze hry (classic, tbc nebo wotlk)
+	# verze hry (classic, tbc, wotlk nebo cata)
 	version: wotlk
 
-	# emulator tc nebo oregon
+	# emulator (tc, oregon nebo skyfire)
 	emulator: tc
 
 	# ceny - musí se zadat počet a uvést typ "golds" (count = počet goldů) nebo "item" (count = ID:POCET)
