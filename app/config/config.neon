@@ -41,6 +41,10 @@ common:
 			class: TokenFacade
 			arguments: [@dibi.sqlite]
 
+		worldFacade:
+			class: WorldFacade
+			arguments: [@dibi.connection]
+
 
 	factories:
 
