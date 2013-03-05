@@ -111,7 +111,7 @@ class CharacterPresenter extends BasePresenter
 		$price = $this->getContext()->parameters['prices']['rename'];
 		$values->name = ucfirst(strtolower($values->name));
 
-		if ($account->online) {
+		if ($this->checkOnlineStatus($account)) {
 			$form->addError('Přejmenování nejde provést, když je účet online, nejdříve se z účtu odhlašte');
 			return;
 		}
@@ -201,7 +201,7 @@ class CharacterPresenter extends BasePresenter
 		$price = $this->getContext()->parameters['prices']['teleport'];
 		$values->location = $this->getContext()->parameters['locations'][$values->location];
 
-		if ($account->online) {
+		if ($this->checkOnlineStatus($account)) {
 			$form->addError('Teleportování nejde provést, když je účet online, nejdříve se z účtu odhlašte');
 			return;
 		}
@@ -220,6 +220,29 @@ class CharacterPresenter extends BasePresenter
 			$this->flashMessage('Postava byla teleportována', 'success');
 			$this->redirect('this');
 		}
+	}
+
+
+
+	/************************ helpers ************************/
+
+
+	/**
+	 * @param DibiRow $account
+	 * @return bool
+	 */
+	public function checkOnlineStatus($account)
+	{
+		if (isset($account->online) && $account->online) {
+			return TRUE;
+		}
+
+		$characters = $this->characterFacade->findOnlineByAccount($account->id);
+		if (count($characters) > 0) {
+			return TRUE;
+		}
+
+		return FALSE;
 	}
 
 }

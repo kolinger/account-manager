@@ -34,6 +34,18 @@ class CharacterFacade extends BaseFacade
 
 
 	/**
+	 * @param int $account
+	 * @return DibiRow|FALSE
+	 */
+	public function findOnlineByAccount($account)
+	{
+		$query = $this->connection->query('SELECT ' . self::CHARACTERS_FIELDS . ' FROM [:chars:characters] WHERE [online] = 1 AND [account] = %i]', $account);
+		return $query->fetchAll();
+	}
+
+
+
+	/**
 	 * @param int $id
 	 * @param int $account
 	 * @return DibiRow|FALSE

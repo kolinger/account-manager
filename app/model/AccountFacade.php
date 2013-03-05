@@ -6,28 +6,13 @@
 class AccountFacade extends BaseFacade
 {
 
-	const ACCOUNT_FIELDS = '
-		[id],
-		[username],
-		[sha_pass_hash],
-		[email],
-		[joindate],
-		[last_ip],
-		[last_login],
-		[locked],
-		[online],
-		[expansion]
-	';
-
-
-
 	/**
 	 * @param $id
 	 * @return DibiRow|FALSE
 	 */
 	public function findOneById($id)
 	{
-		$query = $this->connection->query('SELECT ' . self::ACCOUNT_FIELDS . ' FROM [:auth:account] WHERE [id] = %i', $id);
+		$query = $this->connection->query('SELECT * FROM [:auth:account] WHERE [id] = %i', $id);
 		return $query->fetch();
 	}
 
@@ -39,7 +24,7 @@ class AccountFacade extends BaseFacade
 	 */
 	public function findOneByUsername($username)
 	{
-		$query = $this->connection->query('SELECT ' . self::ACCOUNT_FIELDS . ' FROM [:auth:account] WHERE [username] = %s', $username);
+		$query = $this->connection->query('SELECT * FROM [:auth:account] WHERE [username] = %s', $username);
 		return $query->fetch();
 	}
 
@@ -51,7 +36,7 @@ class AccountFacade extends BaseFacade
 	 */
 	public function findOneByEmail($email)
 	{
-		$query = $this->connection->query('SELECT ' . self::ACCOUNT_FIELDS . ' FROM [:auth:account] WHERE [email] = %s', $email);
+		$query = $this->connection->query('SELECT * FROM [:auth:account] WHERE [email] = %s', $email);
 		return $query->fetch();
 	}
 
