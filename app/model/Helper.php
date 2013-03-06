@@ -76,4 +76,24 @@ class Helper
 		return $time;
 	}
 
+
+
+	public static function formatMute(DibiRow $account)
+	{
+		if ($account->mutetime < 0) {
+			$time = $account->mutetime * -1;
+		} else {
+			$time = $account->mutetime - time();
+		}
+		if ($time <= 0) {
+			return __('účet nemá mute');
+		}
+		$s = self::formatPlayedTime($time);
+		if (isset($account->mutereason) && isset($account->muteby)) {
+			$s .= ' (' . __('důvod:') . ' ' . $account->mutereason;
+			$s .= ', ' . __('od:') . ' ' . $account->muteby . ')';
+		}
+		return $s;
+	}
+
 }
