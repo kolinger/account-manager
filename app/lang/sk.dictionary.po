@@ -4,13 +4,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-03-05 23:44+0100\n"
+"PO-Revision-Date: 2013-03-06 16:45+0100\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4 ? 1 : 2));\n"
-
+"Last-Translator: \n"
+"X-Generator: Poedit 1.5.5\n"
 
 msgid "Aktuální heslo"
 msgstr "Aktuálne heslo"
@@ -61,7 +62,7 @@ msgid "Lokace"
 msgstr "Lokácia"
 
 msgid "Nahráno"
-msgstr "Nahraté"
+msgstr "Odohraté"
 
 msgid "Nové heslo"
 msgstr "Nové heslo"
@@ -87,8 +88,10 @@ msgstr "Overenie nového hesla"
 msgid "Ověření nového hesla nesouhlasí"
 msgstr "Overenie nového hesla nesúhlasi"
 
-msgid "Platnost formuláře vypršela, aktualizujte prosím stránku a akci opakujte"
-msgstr "Platnosť formulára vypršala, aktualizujťe prosím stránku a akciu opakujťe"
+msgid ""
+"Platnost formuláře vypršela, aktualizujte prosím stránku a akci opakujte"
+msgstr ""
+"Platnosť formulára vypršala, aktualizujťe prosím stránku a akciu opakujťe"
 
 msgid "Poslední přihlášení"
 msgstr "Posledné prihlásenie"
@@ -190,7 +193,7 @@ msgid "den"
 msgid_plural ""
 msgstr[0] "deň"
 msgstr[1] "dni"
-msgstr[2] "dn"
+msgstr[2] "dní"
 
 msgid "hodina"
 msgid_plural ""
@@ -225,3 +228,74 @@ msgstr ""
 msgid "Test"
 msgstr ""
 
+msgid "Aktivní"
+msgstr "Aktívny"
+
+msgid "Ano"
+msgstr "Áno"
+
+msgid "Autor"
+msgstr "Autor"
+
+msgid "Bany"
+msgstr "Bany"
+
+msgid "Classic"
+msgstr "Classic"
+
+msgid "Do"
+msgstr "Do"
+
+msgid "Důvod"
+msgstr "Dôvod"
+
+msgid "Mute"
+msgstr "Mute"
+
+msgid "Ne"
+msgstr "Nie"
+
+msgid "Od"
+msgstr "Od"
+
+msgid "Odemknout účet"
+msgstr "Odomknúť účet"
+
+msgid "Přihlášení proběhlo úspěšně"
+msgstr "Prihlásenie prebehlo úspešne"
+
+msgid "Uzamknout"
+msgstr "Uzamknúť"
+
+msgid "Uzamknout účet"
+msgstr "Uzamknúť účet"
+
+msgid "Změna e-mailu"
+msgstr "Zmena e-mailu"
+
+msgid "důvod:"
+msgstr "dôvod:"
+
+msgid "důvod: "
+msgstr "dôvod: "
+
+msgid "od:"
+msgstr "od:"
+
+msgid "od: "
+msgstr "od: "
+
+msgid "permanentní"
+msgstr "permanentný"
+
+msgid "Účet byl odemknut"
+msgstr "Účet bol odomknutý"
+
+msgid "Účet byl uzamknut"
+msgstr "Účet bol uzamknutý"
+
+msgid "Účet je uzamčen"
+msgstr "Účet je uzamknutý"
+
+msgid "Ban"
+msgstr "Ban"
