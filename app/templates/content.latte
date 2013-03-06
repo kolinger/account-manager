@@ -9,6 +9,6 @@
 	</div>
 </div>
 
-<div class="alert alert-{$flash->type}" n:foreach="$flashes as $flash">{$flash->message}</div>
+<div class="alert alert-{$flash->type}" n:foreach="$flashes as $flash">{_}{$flash->message}{/_}</div>
 
 {include #middle}

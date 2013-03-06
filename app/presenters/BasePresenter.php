@@ -30,19 +30,6 @@ abstract class BasePresenter extends NPresenter
 
 
 	/**
-	 * @param $message
-	 * @param string $type
-	 * @return stdClass|void
-	 */
-	public function flashMessage($message, $type = NULL)
-	{
-		$message = $this->translator->translate($message);
-		parent::flashMessage($message, $type);
-	}
-
-
-
-	/**
 	 * @param string $class
 	 * @return ITemplate
 	 */
