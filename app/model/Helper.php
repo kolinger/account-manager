@@ -78,6 +78,10 @@ class Helper
 
 
 
+	/**
+	 * @param DibiRow $account
+	 * @return string
+	 */
 	public static function formatMute(DibiRow $account)
 	{
 		if ($account->mutetime < 0) {
