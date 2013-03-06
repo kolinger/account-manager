@@ -46,6 +46,11 @@
 	<a n:href="User:changePassword" class="btn btn-large">{_}Změnit heslo{/_}</a>
 	<a n:href="User:changeEmail" class="btn btn-large">{_}Změnit e-mail{/_}</a>
 	<a n:href="User:changeType" class="btn btn-large">{_}Změnit typ{/_}</a>
+	{if $account->locked}
+		<a n:href="User:unlock" class="btn btn-large btn-warning">{_}Odemknout účet{/_}</a>
+	{else}
+		<a n:href="User:lock" class="btn btn-large">{_}Uzamknout účet{/_}</a>
+	{/if}
 	<!--<a href="#" class="btn btn-large">Aukce postav</a> :)-->
 </div>
 

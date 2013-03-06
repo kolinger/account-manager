@@ -142,4 +142,32 @@ class AccountFacade extends BaseFacade
 		$this->connection->query('UPDATE [:auth:account_banned] SET [active] = 0 WHERE [id] = %i', $id, 'AND [banreason] = %s', 'E-mail activation');
 	}
 
+
+
+	/**
+	 * @param int $id
+	 * @param string $ip
+	 */
+	public function lock($id, $ip)
+	{
+		$data = array(
+			'locked' => 1,
+			'last_ip' => $ip,
+		);
+		$this->connection->query('UPDATE [:auth:account] SET', $data, 'WHERE [id] = %i', $id);
+	}
+
+
+
+	/**
+	 * @param int $id
+	 */
+	public function unlock($id)
+	{
+		$data = array(
+			'locked' => 0,
+		);
+		$this->connection->query('UPDATE [:auth:account] SET', $data, 'WHERE [id] = %i', $id);
+	}
+
 }

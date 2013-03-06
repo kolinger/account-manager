@@ -537,6 +537,28 @@ class UserPresenter extends BasePresenter
 
 
 
+	/************************ account lock ************************/
+
+
+
+	public function actionLock()
+	{
+		$this->accountFacade->lock($this->getUser()->getId(), $this->httpRequest->getRemoteAddress());
+		$this->flashMessage('Účet byl uzamknut', 'success');
+		$this->redirect('Dashboard:default');
+	}
+
+
+
+	public function actionUnlock()
+	{
+		$this->accountFacade->unlock($this->getUser()->getId());
+		$this->flashMessage('Účet byl odemknut', 'success');
+		$this->redirect('Dashboard:default');
+	}
+
+
+
 	/************************ helpers ************************/
 
 
