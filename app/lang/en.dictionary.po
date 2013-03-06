@@ -1,10 +1,10 @@
 # Gettext keys exported by GettextTranslator and Translation Panel
-# Created: 2013-03-06 13:50:53
+# Created: 2013-03-06 14:36:41
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-03-06 13:50+0100\n"
+"PO-Revision-Date: 2013-03-06 14:36+0100\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -12,8 +12,20 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4 ? 1 : 2));\n"
 
 
+msgid "Aktivní"
+msgstr "Active"
+
 msgid "Aktuální heslo"
 msgstr "Actual password"
+
+msgid "Ano"
+msgstr "Yes"
+
+msgid "Autor"
+msgstr "Author"
+
+msgid "Bany"
+msgstr "Bans"
 
 msgid "Byl zadán neplatný formát e-mailu"
 msgstr "E-mail have wrong format"
@@ -26,6 +38,12 @@ msgstr "Classi"
 
 msgid "Datum vytvoření"
 msgstr "Create date"
+
+msgid "Do"
+msgstr "To"
+
+msgid "Důvod"
+msgstr "Reason"
 
 msgid "E-mail"
 msgstr "E-mail"
@@ -69,8 +87,14 @@ msgstr "Mute"
 msgid "Nahráno"
 msgstr "Played"
 
+msgid "Ne"
+msgstr "No"
+
 msgid "Nové heslo"
 msgstr "New password"
+
+msgid "Od"
+msgstr "From"
 
 msgid "Odemknout účet"
 msgstr "Unlock account"
@@ -210,6 +234,9 @@ msgstr "Change Password"
 msgid "Změnit typ"
 msgstr "Change type"
 
+msgid "důvod:"
+msgstr "reason:"
+
 msgid "důvod: "
 msgstr "reason:"
 
@@ -223,6 +250,9 @@ msgstr "from:"
 
 msgid "od: "
 msgstr "from:"
+
+msgid "permanentní"
+msgstr "permanent"
 
 msgid "zpátky na přehled"
 msgstr "back to dashboard"
@@ -242,6 +272,6 @@ msgstr "Account locked"
 msgid "Účet je uzamčen"
 msgstr "Account is locked"
 
-msgid "důvod:"
-msgstr "reason:"
+msgid "Ban"
+msgstr "Ban"
 

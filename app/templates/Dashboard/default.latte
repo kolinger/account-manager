@@ -44,6 +44,16 @@
 		<th>{_}Mute{/_}</th>
 		<td>{Helper::formatMute($account)}</td>
 	</tr>
+	<tr>
+		<th>{_}Ban{/_}</th>
+		<td>
+			{if $banned}
+				<a n:href="User:bans">{_}Ano{/_}</a>
+			{else}
+				{_}Ne{/_}
+			{/if}
+		</td>
+	</tr>
 </table>
 
 <div class="big-buttons">

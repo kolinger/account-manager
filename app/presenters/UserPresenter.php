@@ -559,6 +559,19 @@ class UserPresenter extends BasePresenter
 
 
 
+	/************************ bans ************************/
+
+
+
+	public function renderBans()
+	{
+		$this->template->ip = $this->httpRequest->getRemoteAddress();
+		$this->template->ips = $this->accountFacade->findBansByIp($this->template->ip);
+		$this->template->accounts = $this->accountFacade->findBansByAccount($this->getUser()->getId());
+	}
+
+
+
 	/************************ helpers ************************/
 
 

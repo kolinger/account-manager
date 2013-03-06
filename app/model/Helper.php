@@ -90,7 +90,7 @@ class Helper
 			$time = $account->mutetime - time();
 		}
 		if ($time <= 0) {
-			return __('účet nemá mute');
+			return __('Ne');
 		}
 		$s = self::formatPlayedTime($time);
 		if (isset($account->mutereason) && isset($account->muteby)) {

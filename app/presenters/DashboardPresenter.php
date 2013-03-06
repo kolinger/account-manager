@@ -26,6 +26,21 @@ class DashboardPresenter extends BasePresenter
 	 */
 	private $characterFacade;
 
+	/**
+	 * @var NHttpRequest
+	 */
+	private $httpRequest;
+
+
+
+	/**
+	 * @param NHttpRequest $httpRequest
+	 */
+	public function injectHttpRequest(NHttpRequest $httpRequest)
+	{
+		$this->httpRequest = $httpRequest;
+	}
+
 
 
 	/**
@@ -90,6 +105,7 @@ class DashboardPresenter extends BasePresenter
 	{
 		$this->template->characters = $this->characters;
 		$this->template->account = $this->account;
+		$this->template->banned = $this->accountFacade->getBannedState($this->account->id, $this->httpRequest->getRemoteAddress());
 	}
 
 

@@ -170,4 +170,49 @@ class AccountFacade extends BaseFacade
 		$this->connection->query('UPDATE [:auth:account] SET', $data, 'WHERE [id] = %i', $id);
 	}
 
+
+
+	/**
+	 * @param int $id
+	 * @param string $ip
+	 * @return bool
+	 */
+	public function getBannedState($id, $ip)
+	{
+		$ip = $this->connection->query('SELECT * FROM [:auth:ip_banned] WHERE [ip] = %s', $ip)->fetch();
+		if ($ip) {
+			return TRUE;
+		} else {
+			$account = $this->connection->query('SELECT * FROM [:auth:account_banned] WHERE [id] = %i', $id)->fetch();
+			if ($account) {
+				return TRUE;
+			}
+		}
+		return FALSE;
+	}
+
+
+
+	/**
+	 * @param string $ip
+	 * @return array
+	 */
+	public function findBansByIp($ip)
+	{
+		$query = $this->connection->query('SELECT * FROM [:auth:ip_banned] WHERE [ip] = %s', $ip, 'ORDER BY [bandate] DESC');
+		return $query->fetchAll();
+	}
+
+
+
+	/**
+	 * @param int $id
+	 * @return array
+	 */
+	public function findBansByAccount($id)
+	{
+		$query = $this->connection->query('SELECT * FROM [:auth:account_banned] WHERE [id] = %i', $id, 'ORDER BY [bandate] DESC');
+		return $query->fetchAll();
+	}
+
 }

@@ -1,0 +1,57 @@
+{extends '../content.latte'}
+{block title}{_}Bany{/_}{/block}
+{block middle}
+
+<h2>IP {$ip}</h2>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>{_}Od{/_}</th>
+			<th>{_}Do{/_}</th>
+			<th>{_}Důvod{/_}</th>
+			<th>{_}Autor{/_}</th>
+			<th>{_}Aktivní{/_}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr n:foreach="$ips as $ip" n:class="$ip->bandate >= $ip->unbandate || $ip->unbandate > time() ? error">
+			<td>{$ip->bandate|date:"j. n. Y H:i"}</td>
+			{if $ip->bandate >= $ip->unbandate}
+				<td>{_}permanentní{/_}</td>
+			{else}
+				<td>{$ip->unbandate|date:"j. n. Y H:i"}</td>
+			{/if}
+			<td>{$ip->banreason}</td>
+			<td>{$ip->bannedby}</td>
+			<td>{if $ip->bandate >= $ip->unbandate || $ip->unbandate > time()}{_}Ano{/_}{else}{_}Ne{/_}{/if}</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Účet</h2>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>{_}Od{/_}</th>
+			<th>{_}Do{/_}</th>
+			<th>{_}Důvod{/_}</th>
+			<th>{_}Autor{/_}</th>
+			<th>{_}Aktivní{/_}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr n:foreach="$accounts as $account" n:class="$account->active ? error">
+			<td>{$account->bandate|date:"j. n. Y H:i"}</td>
+		{if $account->bandate >= $account->unbandate}
+			<td>{_}permanentní{/_}</td>
+			{else}
+			<td>{$account->unbandate|date:"j. n. Y H:i"}</td>
+		{/if}
+			<td>{$account->banreason}</td>
+			<td>{$account->bannedby}</td>
+			<td>{if $account->active}{_}Ano{/_}{else}{_}Ne{/_}{/if}</td>
+		</tr>
+	</tbody>
+</table>
+
+<a n:href="Dashboard:" class="btn">← {_}zpátky na přehled{/_}</a>
