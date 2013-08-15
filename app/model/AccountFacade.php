@@ -51,6 +51,7 @@ class AccountFacade extends BaseFacade
 	{
 		$data = array(
 			'sha_pass_hash' => Authenticator::calculateHash($password, $username),
+			'v' => NULL, // hack for stupid emulators
 		);
 		$this->connection->query('UPDATE [:auth:account] SET', $data, 'WHERE [id] = %i', $id);
 	}
