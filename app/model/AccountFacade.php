@@ -184,7 +184,7 @@ class AccountFacade extends BaseFacade
 		if ($ip) {
 			return TRUE;
 		} else {
-			$account = $this->connection->query('SELECT * FROM [:auth:account_banned] WHERE [id] = %i', $id)->fetch();
+			$account = $this->connection->query('SELECT * FROM [:auth:account_banned] WHERE [active] = 1 AND [id] = %i', $id)->fetch();
 			if ($account) {
 				return TRUE;
 			}
