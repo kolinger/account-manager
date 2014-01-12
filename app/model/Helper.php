@@ -18,8 +18,10 @@ class Helper
 		6 => 'Tauren',
 		7 => 'Gnome',
 		8 => 'Troll',
+		9 => 'Goblin',
 		10 => 'Blood Elf',
 		11 => 'Draenei',
+		22 => 'Worgen',
 	);
 
 	/**
